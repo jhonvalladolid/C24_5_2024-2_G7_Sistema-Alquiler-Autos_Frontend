@@ -1,0 +1,109 @@
+<app-hero-banner
+  [title]="'Rentar Vehículo'"
+  [backgroundImage]="'assets/images/hero_1_a.jpg'"
+  [breadcrumbLink]="'/car-listings'"
+  [breadcrumbLabel]="'Listado de Vehículos'"
+  [currentPage]="'Rentar Vehículo'"
+></app-hero-banner>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6">
+      <img [src]="vehiculo?.foto" alt="Vehículo" class="img-fluid rounded" />
+    </div>
+    <div class="col-lg-6">
+      <h2>{{ vehiculo?.modelo }}</h2>
+      <p><strong>Precio:</strong> {{ vehiculo?.precio }} por día</p>
+      <p><strong>Descripción:</strong> {{ vehiculo?.descripcion }}</p>
+      <p><strong>Capacidad:</strong> {{ vehiculo?.asientos }} pasajeros</p>
+
+      <form (ngSubmit)="registrarRenta()">
+        <div class="form-group">
+          <label for="licencia_pdf">Subir licencia (PDF)</label>
+          <input
+            type="file"
+            class="form-control"
+            id="licencia_pdf"
+            (change)="manejarArchivo($event)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="dias_alquiler">Días de alquiler</label>
+          <input
+            type="number"
+            class="form-control"
+            id="dias_alquiler"
+            [(ngModel)]="solicitud.dias_alquiler"
+            name="dias_alquiler"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="pasajeros">Número de pasajeros</label>
+          <input
+            type="number"
+            class="form-control"
+            id="pasajeros"
+            [(ngModel)]="solicitud.pasajeros"
+            name="pasajeros"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="comentario">Comentario</label>
+          <textarea
+            class="form-control"
+            id="comentario"
+            [(ngModel)]="solicitud.comentario"
+            name="comentario"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="vehiculo_id">Seleccionar Vehículo</label>
+          <select
+            class="form-control"
+            id="vehiculo_id"
+            [(ngModel)]="solicitud.vehiculo_id"
+            name="vehiculo_id"
+            required
+          >
+            <option *ngFor="let vehiculo of listaVehiculos" [value]="vehiculo.id">
+              {{ vehiculo.modelo }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="estado_id">Estado de la Solicitud</label>
+          <select
+            class="form-control"
+            id="estado_id"
+            [(ngModel)]="solicitud.estado_id"
+            name="estado_id"
+            required
+          >
+            <option *ngFor="let estado of listaEstados" [value]="estado.id">
+              {{ estado.nombre }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="usuario_id">Seleccionar Usuario</label>
+          <select
+            class="form-control"
+            id="usuario_id"
+            [(ngModel)]="solicitud.usuario_id"
+            name="usuario_id"
+            required
+          >
+            <option *ngFor="let usuario of listaUsuarios" [value]="usuario.id">
+              {{ usuario.nombre }}
+            </option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar Renta</button>
+      </form>
+    </div>
+  </div>
+</div>

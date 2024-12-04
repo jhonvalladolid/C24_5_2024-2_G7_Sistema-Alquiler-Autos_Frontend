@@ -6,14 +6,16 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { TestimonialsPageComponent } from './pages/testimonials-page/testimonials-page.component';
+import { RentVehicleComponent } from './pages/rent-vehicle/rent-vehicle.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Ruta por defecto
-  { path: 'listing', component: ListingComponent }, // Ruta por defecto
-  { path: 'testimonials', component: TestimonialsPageComponent }, // Ruta por defecto
-  { path: 'blog', component: BlogComponent }, // Ruta por defecto
-  { path: 'about', component: AboutComponent }, // Ruta por defecto
-  { path: 'contact', component: ContactComponent }, // Ruta por defecto
+  { path: '', component: HomeComponent },
+  { path: 'listing', component: ListingComponent },
+  { path: 'testimonials', component: TestimonialsPageComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'rent/:id', component: RentVehicleComponent },
   { path: '**', redirectTo: '' }, // Redireccionar cualquier ruta desconocida a Home
 ];
 

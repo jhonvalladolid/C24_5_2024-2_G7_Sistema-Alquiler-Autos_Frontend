@@ -25,6 +25,8 @@ import { CarCompanyComponent } from './components/car-company/car-company.compon
 import { TeamMembersComponent } from './components/team-members/team-members.component';
 import { OurHistoryComponent } from './components/our-history/our-history.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { RentVehicleComponent } from './pages/rent-vehicle/rent-vehicle.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,12 +51,14 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     CarCompanyComponent,
     TeamMembersComponent,
     OurHistoryComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    RentVehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
