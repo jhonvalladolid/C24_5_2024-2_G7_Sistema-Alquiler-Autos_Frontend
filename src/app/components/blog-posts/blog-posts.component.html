@@ -1,0 +1,33 @@
+<div class="site-section bg-light">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let post of posts" class="col-lg-4 col-md-6 mb-4">
+        <div class="post-entry-1 h-100">
+          <a [href]="post.link">
+            <img [src]="post.image" alt="Image" class="img-fluid">
+          </a>
+          <div class="post-entry-1-contents">
+            <h2><a [href]="post.link">{{ post.title }}</a></h2>
+            <span class="meta d-inline-block mb-3">
+              {{ post.date }} <span class="mx-2">by</span> <a href="#">{{ post.author }}</a>
+            </span>
+            <p>{{ post.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paginación -->
+    <div class="row">
+      <div class="col-12 text-right">
+        <div class="custom-pagination">
+          <a href="#">1</a>
+          <span>2</span>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

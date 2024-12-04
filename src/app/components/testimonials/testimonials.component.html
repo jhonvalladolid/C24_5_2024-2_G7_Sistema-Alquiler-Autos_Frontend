@@ -1,0 +1,28 @@
+<!-- Contenido de los testimonios -->
+<div class="site-section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <h2 class="section-heading"><strong>Lo que opinan nuestros clientes</strong></h2>
+        <p class="mb-5">Nos enorgullece brindar un servicio excepcional a todos nuestros clientes.</p>
+      </div>
+    </div>
+    <!-- Usar el componente reutilizable -->
+    <div class="row">
+      <div *ngFor="let testimonio of testimonios" class="col-lg-4 mb-4">
+        <div class="testimonial-2">
+          <blockquote class="mb-4">
+            <p>"{{ testimonio.mensaje }}"</p>
+          </blockquote>
+          <div class="d-flex v-card align-items-center">
+            <img [src]="testimonio.imagen" alt="Imagen de {{ testimonio.nombre }}" class="img-fluid mr-3">
+            <div class="author-name">
+              <span class="d-block">{{ testimonio.nombre }}</span>
+              <span>{{ testimonio.descripcion }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

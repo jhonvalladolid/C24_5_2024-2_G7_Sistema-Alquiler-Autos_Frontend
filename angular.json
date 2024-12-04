@@ -25,9 +25,31 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/fonts/icomoon/style.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/bootstrap-datepicker.css",
+              "src/assets/css/jquery.fancybox.min.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/owl.theme.default.min.css",
+              "src/assets/fonts/flaticon/font/flaticon.css",
+              "src/assets/css/aos.css",
+              "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.3.1.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/jquery.sticky.js",
+              "src/assets/js/jquery.waypoints.min.js",
+              "src/assets/js/jquery.animateNumber.min.js",
+              "src/assets/js/jquery.fancybox.min.js",
+              "src/assets/js/jquery.easing.1.3.js",
+              "src/assets/js/bootstrap-datepicker.min.js",
+              "src/assets/js/aos.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,12 +109,27 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/style.css",
+              "src/assets/css/aos.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/owl.theme.default.min.css",
+              "src/assets/css/bootstrap-datepicker.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.3.1.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/aos.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/bootstrap-datepicker.min.js",
+              "src/assets/js/jquery.waypoints.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9da7f697-6fb3-4535-96a3-4bb87c3dc3dc"
   }
 }
